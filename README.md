@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# On this Day
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+You are looking at my test task, which I am doing for one UA / US IT company. This task is supposed to develop a widget to show which users have a Birthday today. I asked to change the domain to make a widget to present today's historical events from Wiki.
 
-## Available Scripts
+## Implementation
 
-In the project directory, you can run:
+- Widget / App developed using [Create React App](https://create-react-app.dev/). So you you can use usual CRA approaches to run this app on your localhost.
+- Since I my app will not follow the given design Pixel Perfect, I decided to spent some time on writing my own UI design. Check it on [Figma](https://www.figma.com/proto/YWWyHyEycQwDFWIjx2JgW7/This-Day-in-History?node-id=202%3A6&scaling=min-zoom&page-id=0%3A1).
 
-### `yarn start`
+## Features CheckList
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+|    Id | Description                                                                                                  |
+| ----: | :----------------------------------------------------------------------------------------------------------- |
+|  F-11 | List Events on the "Today" Tab                                                                               |
+|  F-12 | Events should be sorted chronically by it's year                                                             |
+|  F-21 | On non-leap years, events from the Feb 29th should be displayed on the "Today" tab on Feb 28th               |
+|  F-31 | List Events from last 7 days on "Past Days" Tab                                                              |
+|  F-51 | List Events from next 7 days on "Next Days" Tab                                                              |
+|  F-61 | By default, the widget displays only 10 first events                                                         |
+|  F-71 | Provide "Show more" button to list 10 events more                                                            |
+|  F-81 | Show "Show more" button only if there are items to show more                                                 |
+|  F-91 | Show "Unfortunately there is no users with birthdays on these dates" message if no events on the chosen tab  |
+|  F-X1 | Group events by day on "Past Days" & "Next Days" Tabs                                                        |
+|  F-X2 | Provide navigation sidebar to navigate on days on "Next/Past Days" Tabs                                      |
+| NF-10 | Adaptive for narrow & wide screens                                                                           |
+| NF-20 | Test cross-browser compatibility                                                                             |
+| NF-30 | Use Vodafone Regular font                                                                                    |
+| NF-X1 | Ensure that project structure and source code are clear and understandable                                   |
+| NF-X2 | Provide a very short README file that describes project structure, build instructions and launch instruction |
+| NF-X3 | Publish source code to a accessible git repository                                                           |
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### If you wonder how to run [CRA](https://create-react-app.dev/) app
 
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+yarn
+yarn start
+```
