@@ -1,0 +1,13 @@
+.LanguageButton {
+  position: absolute;
+  right: 0;
+  
+  height: 32px;
+  width: 32px;
+  padding: none;
+  border: none;
+  border-radius: 16px;
+  margin: 10px;
+
+  background-position: center;
+}

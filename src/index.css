@@ -11,3 +11,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: 'VodafoneRg';
+  src: local('VodafoneRg'), url(./assets/fonts/VodafoneRg.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'VodafoneRgBd';
+  src: local('VodafoneRgBd'), url(./assets/fonts/VodafoneRgBd.ttf) format('truetype');
+}

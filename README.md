@@ -35,3 +35,15 @@ You are looking at my test task, which I am doing for one UA / US IT company. Th
 yarn
 yarn start
 ```
+
+### Estimating process
+
+|     | Component / Feature    |  hours  |
+| --- | :--------------------- | :-----: |
+|     | Layout & Styling       |    1    |
+|     | Navigation             |    ½    |
+|     | Event Component        |    ½    |
+|     | Event List Component   |    1    |
+|     | Global State (Context) |    1    |
+|     | Api                    |    ½    |
+|     |                        | **4,5** |
