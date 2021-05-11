@@ -17,16 +17,22 @@ const EventsList = (today, pastweek, nextweek) => {
     getEvents();
   }, []);
 
+  const renderList = () => {
+    if (!events.length) return <p>Oops, No events for today...</p>;
+    if (!isLoaded) return <Loader />;
+    return (
+      <>
+        {events.map((event, i) => (
+          <EventCard key={`event-card-${i}`} event={event} />
+        ))}
+      </>
+    );
+  };
+
   return (
     <div className="EventsList">
-      <div className="EventsList-topGradient">{" "}</div>
-      {isLoaded ? (
-        events.map((event, i) => (
-          <EventCard key={`event-card-${i}`} event={event} />
-        ))
-      ) : (
-        <Loader />
-      )}
+      <div className="EventsList-topGradient"> </div>
+      {renderList()}
     </div>
   );
 };
