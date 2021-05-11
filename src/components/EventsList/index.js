@@ -7,18 +7,19 @@ import EventCard from "../EventCard";
 const EventsList = (today, pastweek, nextweek) => {
   let [isLoaded, setIsLoaded] = useState(false);
   let [events, setEvents] = useState([]);
+  const { month, dayDate } = today.today;
 
   useEffect(() => {
     async function getEvents() {
       setIsLoaded(true);
-      const data = await getEventsOnThisDay();
+      const data = await getEventsOnThisDay(month, dayDate);
       setEvents(data);
     }
     getEvents();
-  }, []);
+  }, [today]);
 
   const renderList = () => {
-    if (!events.length) return <p>Oops, No events for today...</p>;
+    if (!events || !events.length) return <p>Oops, No events for today...</p>;
     if (!isLoaded) return <Loader />;
     return (
       <>

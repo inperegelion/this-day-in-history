@@ -3,8 +3,8 @@ import "./style.css";
 const EventCard = (event) => {
   const ev = event.event;
   const { text, year } = ev;
-  const imgSrc = ev.pages[0]?.thumbnail.source;
-  const imgTitle = ev.pages[0]?.displaytitle;
+  const imgSrc = ev?.pages[0]?.thumbnail?.source;
+  const imgTitle = ev?.pages[0]?.displaytitle;
 
   return (
     <article className="EventCard">
