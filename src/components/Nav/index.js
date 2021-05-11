@@ -12,10 +12,11 @@ const Nav = () => {
     <NavLink
       key={`tab-link-to-${to}`}
       to={to}
+      exact
       className="NavLink"
       activeStyle={{
         background: "rgba(91, 91, 91, 0.1)",
-        borderBottom: "3px solid #FF0000"
+        borderBottom: "3px solid #FF0000",
       }}>
       {title}
     </NavLink>

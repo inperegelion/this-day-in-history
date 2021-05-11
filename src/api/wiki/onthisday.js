@@ -1,4 +1,5 @@
-const API_endpoint = "https://uk.wikipedia.org/api/rest_v1/feed/onthisday/";
+const API_endpoint =
+  "https://uk.wikipedia.org/api/rest_v1/feed/onthisday/selected";
 
 const today = new Date();
 
