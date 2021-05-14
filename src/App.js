@@ -2,16 +2,9 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 import LanguageButton from "./components/LanguageButton";
 import Nav from "./components/Nav";
-import EventsList from "./components/EventsList";
+import EventsList from "./components/EventsList copy";
 
 function App() {
-  const todayDate = new Date();
-
-  const today = {
-    month: todayDate.getMonth() + 1,
-    dayDate: todayDate.getDate(),
-  };
-
   return (
     <div className="App">
       <LanguageButton />
@@ -20,13 +13,13 @@ function App() {
         <Nav />
         <Switch>
           <Route exact path="/past-week">
-            <EventsList today={today} pastweek />
+            <EventsList pastweek />
           </Route>
           <Route exact path="/">
-            <EventsList today={today} />
+            <EventsList today />
           </Route>
           <Route exact path="/next-week">
-            <EventsList today={today} nextweek />
+            <EventsList nextweek />
           </Route>
         </Switch>
       </Router>

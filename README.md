@@ -13,9 +13,10 @@ You are looking at my test task, which I am doing for one UA / US IT company. Th
 | :--: | ---------: | :----------------------------------------------------------------------------------------------------------- |
 |  ✅  |       F-11 | List Events on the "Today" Tab                                                                               |
 |  ✅  |       F-12 | Events should be sorted chronically by it's year                                                             |
-|  🏗  |       F-21 | On non-leap years, events from the Feb 29th should be displayed on the "Today" tab on Feb 28th               |
-|  ❌  |       F-31 | List Events from last 7 days on "Past Days" Tab                                                              |
-|  ❌  |       F-51 | List Events from next 7 days on "Next Days" Tab                                                              |
+|  ✅  |       F-21 | On non-leap years, events from the Feb 29th should be displayed on the "Today" tab on Feb 28th               |
+|  🏗  |       F-31 | List Events from last 7 days on "Past Days" Tab                                                              |
+|  🏗  |       F-32 | List Events from Yesterday on "Past Days" Tab                                                              |
+|  🏗  |       F-51 | List Events from next 7 days on "Next Days" Tab                                                              |
 |  ❌  |       F-61 | By default, the widget displays only 10 first events                                                         |
 |  ❌  |       F-71 | Provide "Show more" button to list 10 events more                                                            |
 |  ❌  |       F-81 | Show "Show more" button only if there are items to show more                                                 |
