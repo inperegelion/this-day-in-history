@@ -1,38 +1,39 @@
-import { useEffect, useState } from "react";
-import Loader from "../Loader";
-import getEventsOnThisDay from "../../api/wiki/onthisday";
-import "./style.css";
+import { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { loadTodaysEvents, loadPrevWeek } from "../../redux/actions";
+// import {
+//   selectNextWeek,
+//   selectPastWeek,
+//   selectTodayEvents,
+// } from "../../redux/selectors";
+
 import EventCard from "../EventCard";
+import "./style.css";
 
 const EventsList = (props) => {
-  let [isLoaded, setIsLoaded] = useState(false);
-  let [events, setEvents] = useState([]);
   const { today, pastweek, nextweek } = props;
+  const dates = useSelector((state) => state.dates);
+  // const nextWeek = useSelector(selectNextWeek);
+  // const todayEvents = useSelector(selectTodayEvents);
+  // const pastWeek = useSelector(selectPastWeek);
+  const todayDate = useSelector((state) => state.today);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    async function pushEventsOfADay(dateObj) {
-      const [mo, day] = [dateObj.getMonth() + 1, dateObj.getDate()];
-      const data = await getEventsOnThisDay(mo, day);
-      setIsLoaded(true);
-      setEvents((events) => [...events, ...data]);
+    if (today) {
+      dispatch(loadTodaysEvents(new Date()));
+    } else if (pastweek) {
+      dispatch(loadPrevWeek(new Date(), true));
+    } else if (nextweek) {
+      dispatch(loadPrevWeek(new Date(), false));
     }
-
-    if (pastweek || nextweek) {
-      // ForEach is the fastest iteration approach, According to https://jsben.ch/wY5fo
-      const week = pastweek
-        ? [-1, -2, -3, -4, -5, -6, -7]
-        : [1, 2, 3, 4, 5, 6, 7];
-      week.forEach((dDiff) => {
-        const d = new Date();
-        d.setDate(today.getDate() + dDiff);
-        pushEventsOfADay(d);
-      });
-    } else pushEventsOfADay(today);
-  }, [nextweek, pastweek, today]);
+  }, [dispatch, today, pastweek, nextweek]);
 
   const renderList = () => {
-    if (!events || !events.length) return <p>Oops, No events for today...</p>;
-    if (!isLoaded) return <Loader />;
+    const events = today ? dates[todayDate] : getEventsOfTimeSpan(dates);
+
+    console.log(events);
+    if (!events || !events.length) return <p>Oops, No events found yet...</p>;
     return (
       <>
         {events.map((event, i) => (
@@ -51,3 +52,11 @@ const EventsList = (props) => {
 };
 
 export default EventsList;
+
+const getEventsOfTimeSpan = (datesDict, from, to) => {
+  // IDEA: u can .filter dates and return grouped by dates
+  return Object.entries(datesDict).reduce(
+    (acc, pair) => [...acc, ...pair[1]],
+    []
+  );
+};

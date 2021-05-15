@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 import LanguageButton from "./components/LanguageButton";
 import Nav from "./components/Nav";
-import EventsList from "./components/EventsList copy";
+import EventsList from "./components/EventsList";
 
 function App() {
   return (

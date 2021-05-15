@@ -4,6 +4,7 @@ import thunkMiddleware from "redux-thunk";
 
 const defaultState = {
   today: new Date().toISOString().slice(5, 10),
+  todayObj: new Date(),
   /** Langs supported yet: [UK] */
   lang: "UK",
   /**
