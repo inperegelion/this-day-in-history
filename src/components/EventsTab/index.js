@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { loadTodaysEvents, loadPrevWeek } from "../../redux/actions";
 import {
@@ -12,11 +12,12 @@ import "./style.css";
 
 const EventsTab = (props) => {
   const { today, pastweek, nextweek } = props;
+
   const nextWeek = useSelector(selectNextWeek);
   const todayEvents = useSelector(selectTodayEvents);
   const pastWeek = useSelector(selectPastWeek);
-
   const todayDate = useSelector((state) => state.today);
+
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -32,19 +33,45 @@ const EventsTab = (props) => {
   const renderTab = () => {
     // how WET this code is 🤢...
     if (today) {
-      return EventsOfTheDay(todayDate, todayEvents[todayDate]);
+      return (
+        <EventsOfTheDay
+          label={todayDate}
+          events={todayEvents[todayDate]}
+          i={0}
+        />
+      );
     } else if (pastweek) {
-      window.d = JSON.parse(JSON.stringify(pastWeek));
-      return Object.entries(pastWeek)
-        .sort((a, b) => (a[0] < b[0] ? 1 : -1))
-        .map((pair, i) => EventsOfTheDay(pair[0], pair[1]));
+      return (
+        <ul className="Days-list">
+          {Object.entries(pastWeek)
+            .sort((a, b) => (a[0] < b[0] ? 1 : -1))
+            .map((pair, i) => (
+              <EventsOfTheDay
+                key={`events-of-the-day-${pair[0]}`}
+                label={pair[0]}
+                events={pair[1]}
+                i={i}
+              />
+            ))}
+        </ul>
+      );
     } else if (nextweek) {
-      return Object.entries(nextWeek)
-        .sort((a, b) => (a[0] > b[0] ? 1 : -1))
-        .map((pair, i) => EventsOfTheDay(pair[0], pair[1]));
+      return (
+        <ul className="Days-list">
+          {Object.entries(nextWeek)
+            .sort((a, b) => (a[0] > b[0] ? 1 : -1))
+            .map((pair, i) => (
+              <EventsOfTheDay
+                key={`events-of-the-day-${pair[0]}`}
+                label={pair[0]}
+                events={pair[1]}
+                i={i}
+              />
+            ))}
+        </ul>
+      );
     }
   };
-
 
   return (
     <div className="EventsTab">

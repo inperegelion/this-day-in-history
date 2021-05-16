@@ -14,3 +14,7 @@
   );
   z-index: -1;
 }
+
+.Days-list {
+  padding-inline-start: 0;
+}

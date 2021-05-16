@@ -20,7 +20,7 @@ You are looking at my test task, which I am doing for one UA / US IT company. Th
 |  🏗  |       F-71 | Provide "Show more" button to list 10 events more                                                            |
 |  🏗  |       F-81 | Show "Show more" button only if there are items to show more                                                 |
 |  ✅  |       F-91 | Show "Unfortunately there is no users with birthdays on these dates" message if no events on the chosen tab  |
-|  🏗  |       F-X1 | Group events by day on "Past Days" & "Next Days" Tabs                                                        |
+|  ✅  |       F-X1 | Group events by day on "Past Days" & "Next Days" Tabs                                                        |
 |  ❌  |       F-X2 | Provide navigation sidebar to navigate on days on "Next/Past Days" Tabs                                      |
 |  ❌  |      NF-10 | Adaptive for narrow & wide screens                                                                           |
 |  ❌  |      NF-20 | Test cross-browser compatibility                                                                             |
