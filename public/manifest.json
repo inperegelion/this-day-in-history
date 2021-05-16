@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "On This Day",
+  "name": "This day in History",
   "icons": [
     {
       "src": "favicon.ico",
