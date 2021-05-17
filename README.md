@@ -25,7 +25,7 @@ You are looking at my test task, which I am doing for one UA / US IT company. Th
 |  ❌  |      NF-10 | Adaptive for narrow & wide screens                                                                           |
 |  ❌  |      NF-20 | Test cross-browser compatibility                                                                             |
 |  ✅  |      NF-30 | Use Vodafone Regular font                                                                                    |
-|  🏗  |      NF-X1 | Ensure that project structure and source code are clear and understandable                                   |
+|  🏗   |      NF-X1 | Ensure that project structure and source code are clear and understandable                                   |
 |  ✅  |      NF-X2 | Provide a very short README file that describes project structure, build instructions and launch instruction |
 |  ✅  |      NF-X3 | Publish source code to a accessible git repository                                                           |
 
@@ -36,14 +36,15 @@ yarn
 yarn start
 ```
 
-### Estimating process
+### Estimating Completing
 
-|     | Component / Feature    |  hours  |
-| --- | :--------------------- | :-----: |
-|     | Layout & Styling       |    1    |
-|     | Navigation             |    ½    |
-|     | Event Component        |    ½    |
-|     | Event List Component   |    1    |
-|     | Global State (Context) |    1    |
-|     | Api                    |    ½    |
-|     |                        | **4,5** |
+|     | Component / Feature | hours  |
+| --- | :------------------ | :----: |
+|     | Figma Outlining     |  1/2   |
+|     | Applying Styling    |  1/2   |
+|     | Showmore Button     |  1/4   |
+|     | Adaptive layout     |  1/2   |
+|     | Event Card remaking |   1    |
+|     | Toggling to New API |  1/2   |
+|     | COdequality fixing  |  1/2   |
+|     |                     | **5h** |
