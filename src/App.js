@@ -1,25 +1,26 @@
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
-import LanguageButton from "./components/LanguageButton";
 import Nav from "./components/Nav";
-import EventsTab from "./components/EventsTab";
+import giftPNG from "./assets/icons/gift.png";
+import AnniversaryTab from "./components/AnniversaryTab";
 
 function App() {
   return (
     <div className="App">
-      <LanguageButton />
-      <h1>This Day in History</h1>
+      <img src={giftPNG} alt="gift box" className="Giftbox-img" />
+      <div className="App-bg-gradient" />
+      <h1>Hiring Day</h1>
       <Router>
         <Nav />
         <Switch>
           <Route exact path="/past-week">
-            <EventsTab pastweek />
+            <AnniversaryTab tab="PAST_DATES" />
           </Route>
           <Route exact path="/">
-            <EventsTab today />
+            <AnniversaryTab tab="TODAY" />
           </Route>
           <Route exact path="/next-week">
-            <EventsTab nextweek />
+            <AnniversaryTab tab="NEXT_DATES" />
           </Route>
         </Switch>
       </Router>

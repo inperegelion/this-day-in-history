@@ -1,17 +1,22 @@
 import "./style.css";
 
-const EventCard = (event) => {
-  const ev = event.event;
+const EventCard = (props) => {
+  const ev = props.event;
   const { text, year } = ev;
   const imgSrc = ev?.pages[0]?.thumbnail?.source;
   const imgTitle = ev?.pages[0]?.displaytitle;
 
   return (
     <article className="EventCard">
-      <img className= "EventCard-picture"src={imgSrc} alt={imgTitle} title={imgTitle} />
-      <section className= "EventCard-description">
-        <h3 className= "EventCard-year">{year}</h3>
-        <p className= "EventCard-text">{text}</p>
+      <img
+        className="EventCard-picture"
+        src={imgSrc}
+        alt={imgTitle}
+        title={imgTitle}
+      />
+      <section className="EventCard-description">
+        <h3 className="EventCard-year">{year}</h3>
+        <p className="EventCard-text">{text}</p>
       </section>
     </article>
   );

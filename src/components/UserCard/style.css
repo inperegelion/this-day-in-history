@@ -1,0 +1,60 @@
+.UserCard {
+  display: flex;
+  margin: 1.5em 0;
+  /* background: rgba(255, 0, 0, 0.1); */
+  width: 300px;
+  max-height: 100px;
+}
+.UserCard-picture {
+  width: 100px;
+  min-width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  max-width: none;
+}
+.UserCard-description {
+  margin: 0.7em 0 0.7em 1em;
+  position: relative;
+}
+.UserCard-name {
+  margin-block-start: 0;
+  margin-block-end: 0;
+
+  font-family: VodafoneRg, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+
+  display: flex;
+  align-items: center;
+
+  color: #5b5b5b;
+}
+.UserCard-title {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  font-family: VodafoneRg, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #5b5b5b;
+}
+
+.UserCard-date {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  font-family: VodafoneRgBd, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 19px;
+
+  color: #5b5b5b;
+  position: absolute;
+  bottom: 0;
+  /* bottom: 0.7em; */
+}

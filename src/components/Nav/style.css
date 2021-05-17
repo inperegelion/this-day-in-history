@@ -6,16 +6,16 @@
 }
 
 .NavLink {
-  font-family: VodafoneRgBd, sans-serif;
+  text-align: center;
+
+  color: #d80027;
+
+  font-family: VodafoneRg, sans-serif;
   font-style: normal;
-  font-weight: 900;
-  font-size: 18px;
-  line-height: 21px;
+  font-size: 17px;
+  line-height: 20px;
   text-decoration: none;
   width: 33%;
   text-align: center;
   padding: 1em;
-
-
-  color: #5b5b5b;
 }

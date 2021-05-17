@@ -3,9 +3,23 @@ import "./style.css";
 
 const Nav = () => {
   const tabs = [
-    { to: "/past-week", title: "Past week" },
-    { to: "/", title: "Today" },
-    { to: "/next-week", title: "Next week" },
+    {
+      to: "/past-week",
+      title: (
+        <span>
+          PAST <br /> dates
+        </span>
+      ),
+    },
+    { to: "/", title: "TODAY" },
+    {
+      to: "/next-week",
+      title: (
+        <span>
+          NEXT <br /> dates
+        </span>
+      ),
+    },
   ];
 
   const renderLink = (to, title) => (
@@ -15,8 +29,7 @@ const Nav = () => {
       exact
       className="NavLink"
       activeStyle={{
-        background: "rgba(91, 91, 91, 0.1)",
-        borderBottom: "3px solid #FF0000",
+        fontFamily: "VodafoneRgBd, sans-serif",
       }}>
       {title}
     </NavLink>

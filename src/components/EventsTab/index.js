@@ -75,7 +75,6 @@ const EventsTab = (props) => {
 
   return (
     <div className="EventsTab">
-      <div className="EventsTab-topGradient"> </div>
       {renderTab()}
     </div>
   );
