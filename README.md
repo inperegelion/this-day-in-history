@@ -1,3 +1,5 @@
+### important
+this repo has 2 branches, this one is about historical events
 # On this Day
 
 You are looking at my test task, which I am doing for one UA / US IT company. This task is supposed to develop a widget to show which users have a Birthday today. I asked to change the domain to make a widget to present today's historical events from Wiki.
