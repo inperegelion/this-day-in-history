@@ -2,7 +2,7 @@
   position: relative;
 
   /* width: 425px; */
-  max-width: 600px;
+  max-width: calc(600px + 6em);
   min-width: 320px;
   margin: auto;
 

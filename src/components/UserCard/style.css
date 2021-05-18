@@ -1,6 +1,6 @@
 .UserCard {
   display: flex;
-  margin: 1.5em 0;
+  margin: 0 1em 1.5em;
   /* background: rgba(255, 0, 0, 0.1); */
   width: 300px;
   max-height: 100px;

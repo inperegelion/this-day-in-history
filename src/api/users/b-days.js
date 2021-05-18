@@ -5,7 +5,6 @@ const today = new Date();
 const getAnniversaries = async (dateFrom, dateTo) => {
   if (!dateTo) {
     if (!dateFrom) throw new Error("invalid timespan!");
-    console.log(dateFrom, dateTo);
     const qs = composeQS({ dateFrom, dateTo: dateFrom });
     const response = await fetch(`${API_endpoint}${qs}`);
     const data = await response.json();

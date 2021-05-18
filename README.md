@@ -1,6 +1,6 @@
 # On this Day
 
-You are looking at my test task, which I am doing for one UA / US IT company. This task is supposed to develop a widget to show which users have a Birthday today. I asked to change the domain to make a widget to present today's historical events from Wiki.
+You are looking at my test task, which I am doing for one UA / US IT company. This task is supposed to develop a widget to show which users have a Birthday today. I asked to change the domain to make a widget to present Who has Anniversary on the date.
 
 ## Implementation
 
@@ -9,25 +9,20 @@ You are looking at my test task, which I am doing for one UA / US IT company. Th
 
 ## Features CheckList
 
-| Rdy? | Feature ID | Description                                                                                                  |
-| :--: | ---------: | :----------------------------------------------------------------------------------------------------------- |
-|  ✅  |       F-11 | List Events on the "Today" Tab                                                                               |
-|  ✅  |       F-12 | Events should be sorted chronically by it's year                                                             |
-|  ✅  |       F-21 | On non-leap years, events from the Feb 29th should be displayed on the "Today" tab on Feb 28th               |
-|  ✅  |       F-31 | List Events from last 7 days on "Past Days" Tab                                                              |
-|  ✅  |       F-51 | List Events from next 7 days on "Next Days" Tab                                                              |
-|  ✅  |       F-61 | By default, the widget displays only 10 first events of a day                                                |
-|  ✅  |       F-71 | Provide "Show more" button to list 10 events more                                                            |
-|  ✅  |       F-81 | Show "Show more" button only if there are items to show more                                                 |
-|  ✅  |       F-91 | Show "Unfortunately there is no users with birthdays on these dates" message if no events on the chosen tab  |
-|  ✅  |       F-X1 | Group events by day on "Past Days" & "Next Days" Tabs                                                        |
-|  ❌  |       F-X2 | Provide navigation sidebar to navigate on days on "Next/Past Days" Tabs                                      |
-|  ❌  |      NF-10 | Adaptive for narrow & wide screens                                                                           |
-|  ❌  |      NF-20 | Test cross-browser compatibility                                                                             |
-|  ✅  |      NF-30 | Use Vodafone Regular font                                                                                    |
-|  🏗   |      NF-X1 | Ensure that project structure and source code are clear and understandable                                   |
-|  ✅  |      NF-X2 | Provide a very short README file that describes project structure, build instructions and launch instruction |
-|  ✅  |      NF-X3 | Publish source code to a accessible git repository                                                           |
+| Rdy? | Feature ID | Description                                                              |
+| :--: | :--------: | :----------------------------------------------------------------------- |
+|  ✅  |    F-10    | List Events on the "Today" Tab                                           |
+|  ✅  |    F-11    | Lists of users on the tabs “Past dates” and “Upcoming dates”             |
+|  ✅  |    F-12    | “Past dates” and “Upcoming dates” are sorted at first by date of birth   |
+|  ❌  |    F-13    | Then “Past dates” and “Upcoming dates” are sorted alphabetically by name |
+|  ✅  |    F-20    | Rule "February 29th"                                                     |
+|  ✅  |    F-30    | “Past Dates” includes users whose anniversaries were in the past 2 weeks |
+|  ✅  |    F-40    | “Today” list includes users whose anniversary matches the current date   |
+|  ✅  |    F-50    | Next Dates” includes users whose anniversaries were in the past 2 weeks  |
+|  ✅  |    F-60    | After tab open, display only first 10 users of corresponding list        |
+|  ✅  |    F-70    | The “Show more” button should show additional 10 users in list.          |
+|  ✅  |    F-80    | Do not display “Show more” button, if there no more additional users     |
+|  ✅  |    F-90    | Widget should display message if there is no users on current list       |
 
 ### If you wonder how to run [CRA](https://create-react-app.dev/) app
 
