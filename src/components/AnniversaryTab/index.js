@@ -46,12 +46,15 @@ const AnniversaryTab = (props) => {
             hiringDate: new Date(user.birthday).toISOString().slice(5, 10),
           }))
           .sort((a, b) => {
-            if (tab === "TODAY") return a["name"] > b["name"] ? 1 : -1;
-            if (tab === "PAST_DATES")
-              return a["hiringDate"] < b["hiringDate"] ? 1 : -1;
-            if (tab === "NEXT_DATES")
-              return a["hiringDate"] > b["hiringDate"] ? 1 : -1;
-            throw new Error("W");
+            if (tab === "TODAY")
+              return a.name.localeCompare(b.name) > 0 ? 1 : -1;
+            if (tab === "PAST_DATES" && a.hiringDate < b.hiringDate) return 1;
+            if (tab === "NEXT_DATES" && a.hiringDate > b.hiringDate) return 1;
+
+            if (a.hiringDate === b.hiringDate) {
+              return a.name.localeCompare(b.name) > 0 ? 1 : -1;
+            }
+            return -1;
           })
       );
       showMoreUsers(10);
@@ -103,11 +106,4 @@ function addDaysAndFormat(date, diff) {
 function formattDate(date) {
   const strMMdd = date.toISOString().slice(5, 10);
   return `${strMMdd.slice(0, 2)}.${strMMdd.slice(3)}`;
-}
-
-function SortUsersForTab(a, b, tab) {
-  if (tab === "TODAY") return a["name"] > b["name"] ? 1 : -1;
-  if (tab === "PAST_DATES") return a["hiringDate"] > b["hiringDate"] ? 1 : -1;
-  if (tab === "NEXT_DATES") return a["hiringDate"] < b["hiringDate"] ? 1 : -1;
-  throw new Error("W");
 }

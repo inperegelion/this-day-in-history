@@ -1,23 +1,29 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+#root {
+  overflow-x: hidden;
+}
+
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
 @font-face {
-  font-family: 'VodafoneRg';
-  src: local('VodafoneRg'), url(./assets/fonts/VodafoneRg.ttf) format('truetype');
+  font-family: "VodafoneRg";
+  src: local("VodafoneRg"),
+    url(./assets/fonts/VodafoneRg.ttf) format("truetype");
 }
 
 @font-face {
-  font-family: 'VodafoneRgBd';
-  src: local('VodafoneRgBd'), url(./assets/fonts/VodafoneRgBd.ttf) format('truetype');
+  font-family: "VodafoneRgBd";
+  src: local("VodafoneRgBd"),
+    url(./assets/fonts/VodafoneRgBd.ttf) format("truetype");
 }

@@ -14,7 +14,7 @@ You are looking at my test task, which I am doing for one UA / US IT company. Th
 |  ✅  |    F-10    | List Events on the "Today" Tab                                           |
 |  ✅  |    F-11    | Lists of users on the tabs “Past dates” and “Upcoming dates”             |
 |  ✅  |    F-12    | “Past dates” and “Upcoming dates” are sorted at first by date of birth   |
-|  ❌  |    F-13    | Then “Past dates” and “Upcoming dates” are sorted alphabetically by name |
+|  ✅  |    F-13    | Then “Past dates” and “Upcoming dates” are sorted alphabetically by name |
 |  ✅  |    F-20    | Rule "February 29th"                                                     |
 |  ✅  |    F-30    | “Past Dates” includes users whose anniversaries were in the past 2 weeks |
 |  ✅  |    F-40    | “Today” list includes users whose anniversary matches the current date   |
