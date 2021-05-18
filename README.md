@@ -1,11 +1,10 @@
 # On this Day
 
-You are looking at my test task, which I am doing for one UA / US IT company. This task is supposed to develop a widget to show which users have a Birthday today. I asked to change the domain to make a widget to present Who has Anniversary on the date.
+You are looking at my test task, which I am doing for one UA IT company. This task is supposed to develop a widget to show which users have a Birthday today. I asked to change the domain to make a widget to present Who has Anniversary on the date.
 
 ## Implementation
 
 - Widget / App developed using [Create React App](https://create-react-app.dev/). So you you can use usual CRA approaches to run this app on your localhost.
-- Since I my app will not follow the given design Pixel Perfect, I decided to spent some time on writing my own UI design. Check it on [Figma](https://www.figma.com/proto/YWWyHyEycQwDFWIjx2JgW7/This-Day-in-History?node-id=202%3A6&scaling=min-zoom&page-id=0%3A1).
 
 ## Features CheckList
 
