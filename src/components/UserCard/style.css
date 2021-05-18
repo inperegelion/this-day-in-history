@@ -1,6 +1,6 @@
 .UserCard {
   display: flex;
-  margin: 0 1em 1.5em;
+  margin: 1.5em 1em 0;
   /* background: rgba(255, 0, 0, 0.1); */
   width: 300px;
   max-height: 100px;
@@ -30,7 +30,7 @@
   display: flex;
   align-items: center;
 
-  color: #5b5b5b;
+  color: #000000;
 }
 .UserCard-title {
   margin-block-start: 0;
@@ -41,7 +41,7 @@
   font-size: 16px;
   line-height: 19px;
 
-  color: #5b5b5b;
+  color: #666666;
 }
 
 .UserCard-date {
@@ -53,7 +53,7 @@
   font-size: 17px;
   line-height: 19px;
 
-  color: #5b5b5b;
+  color: #000000;
   position: absolute;
   bottom: 0;
   /* bottom: 0.7em; */
