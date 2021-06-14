@@ -21,5 +21,5 @@ const getEventsOnThisDay = async (
 
 export default getEventsOnThisDay;
 
-const isItALeapYear = (year) =>
-  (0 === year % 4 && 0 !== year % 100) || 0 === year % 400;
+const isItALeapYear = (year: number): boolean =>
+  (0 === year % 4 && 0 !== year % 100) || 0 === year % 400
