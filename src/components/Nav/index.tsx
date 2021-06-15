@@ -1,45 +1,46 @@
-import { NavLink } from "react-router-dom";
-import "./style.css";
+import { NavLink } from 'react-router-dom'
+import './style.css'
 
 const Nav = () => {
   const tabs = [
     {
-      to: "/past-week",
+      to: '/past-week',
       title: (
         <span>
           PAST <br /> dates
         </span>
       ),
     },
-    { to: "/", title: "TODAY" },
+    { to: '/', title: 'TODAY' },
     {
-      to: "/next-week",
+      to: '/next-week',
       title: (
         <span>
           NEXT <br /> dates
         </span>
       ),
     },
-  ];
+  ]
 
-  const renderLink = (to, title) => (
+  const renderLink = (to: string, title: string) => (
     <NavLink
       key={`tab-link-to-${to}`}
       to={to}
       exact
       className="NavLink"
       activeStyle={{
-        fontFamily: "VodafoneRgBd, sans-serif",
-      }}>
+        fontFamily: 'VodafoneRgBd, sans-serif',
+      }}
+    >
       {title}
     </NavLink>
-  );
+  )
 
   return (
     <nav className="NavTabs">
-      {tabs.map((tab) => renderLink(tab.to, tab.title))}
+      {tabs.map((tab: any) => renderLink(tab.to, tab.title))}
     </nav>
-  );
-};
+  )
+}
 
-export default Nav;
+export default Nav

@@ -1,10 +1,21 @@
-import "./style.css";
-const baseUrl = "https://birthday-api.anromsocial.com";
+import { FC } from 'react'
+import './style.css'
+const baseUrl = 'https://birthday-api.anromsocial.com'
 
-const UserCard = (props) => {
-  const { user } = props;
-  const { avatarUrl, birthday, jobTitle, name } = user;
-  const hiringDate = new Date(birthday).toDateString().slice(4, 10);
+type User = Readonly<{
+  avatarUrl: string
+  birthday: string
+  jobTitle: string
+  name: string
+}>
+type UserCardProps = Readonly<{
+  user: User
+}>
+
+const UserCard: FC<UserCardProps> = (props) => {
+  const { user } = props
+  const { avatarUrl, birthday, jobTitle, name } = user
+  const hiringDate = new Date(birthday).toDateString().slice(4, 10)
 
   return (
     <li className="UserCard">
@@ -20,7 +31,7 @@ const UserCard = (props) => {
         <p className="UserCard-date">{hiringDate}</p>
       </section>
     </li>
-  );
-};
+  )
+}
 
-export default UserCard;
+export default UserCard

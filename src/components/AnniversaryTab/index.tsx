@@ -83,7 +83,7 @@ const AnniversaryTab: FC<AnniversaryTabProps> = (props) => {
       return (
         <>
           <ul className="Users-list">
-            {users.slice(0, usersToShow).map((user, i) => (
+            {users.slice(0, usersToShow).map((user: any, i: number) => (
               <UserCard user={user} key={`card-${i}-of-user-${user.id}`} />
             ))}
           </ul>
